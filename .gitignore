@@ -7,6 +7,7 @@ reports/*.md
 output/*
 !output/.gitkeep
 !output/*.pdf
+!output/cover-letter-*.md
 batch/logs/*
 !batch/logs/.gitkeep
 batch/batch-state.tsv
