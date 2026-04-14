@@ -1,29 +1,27 @@
 # generate-cvs-windows.ps1
-# Run from C:\Users\Yashu\Desktop\projects\career-ops\
-# Generates 5 tailored CV PDFs using Chrome
+# Run from your career-ops folder on Windows.
+# Creates all 5 CV HTML files and generates PDFs using Chrome.
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = 'Stop'
 $repoRoot = $PSScriptRoot
 
-# Find Chrome
 $chromePaths = @(
-    "C:\Program Files\Google\Chrome\Application\chrome.exe",
-    "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+    'C:\Program Files\Google\Chrome\Application\chrome.exe',
+    'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe',
     "$env:LOCALAPPDATA\Google\Chrome\Application\chrome.exe"
 )
 $chrome = $chromePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
-if (-not $chrome) { Write-Error "Chrome not found. Install Chrome or update `$chromePaths."; exit 1 }
+if (-not $chrome) { Write-Error "Chrome not found."; exit 1 }
 Write-Host "Chrome: $chrome"
 
-# Ensure directories
-$htmlDir = Join-Path $repoRoot "cv-html"
-$outDir  = Join-Path $repoRoot "output"
+$htmlDir = Join-Path $repoRoot 'cv-html'
+$outDir  = Join-Path $repoRoot 'output'
 New-Item -ItemType Directory -Force -Path $htmlDir | Out-Null
 New-Item -ItemType Directory -Force -Path $outDir  | Out-Null
 
-
 # --- KPMG ---
-$html_kpmg = @'
+$htmlPath_kpmg = Join-Path $htmlDir "cv-darshan-lingegowda-kpmg.html"
+@"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -234,16 +232,18 @@ $html_kpmg = @'
 </div>
 </body>
 </html>
-'
-@
-$html_kpmg | Out-File -FilePath (Join-Path $htmlDir 'cv-darshan-lingegowda-kpmg.html') -Encoding utf8
-$pdf_kpmg = Join-Path $outDir 'cv-darshan-lingegowda-kpmg-2026-04-13.pdf'
-Write-Host 'Generating cv-darshan-lingegowda-kpmg-2026-04-13.pdf...'
-& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.27 --paper-height=11.69 --print-to-pdf="$pdf_kpmg" --print-to-pdf-no-header (Join-Path $htmlDir 'cv-darshan-lingegowda-kpmg.html') 2>$null
-if (Test-Path $pdf_kpmg) { Write-Host "  OK: $pdf_kpmg" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-kpmg-2026-04-13.pdf" }
+"@
+ | Out-File -FilePath $htmlPath_kpmg -Encoding utf8NoBOM
+$pdfPath_kpmg = Join-Path $outDir "cv-darshan-lingegowda-kpmg-2026-04-13.pdf"
+Write-Host "Generating cv-darshan-lingegowda-kpmg-2026-04-13.pdf..."
+& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.27 --paper-height=11.69 `
+    --print-to-pdf="$pdfPath_kpmg" --print-to-pdf-no-header `
+    "$htmlPath_kpmg" 2>$null
+if (Test-Path $pdfPath_kpmg) { Write-Host "  OK: cv-darshan-lingegowda-kpmg-2026-04-13.pdf" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-kpmg-2026-04-13.pdf" }
 
 # --- EVOLUTIONIQ ---
-$html_evolutioniq = @'
+$htmlPath_evolutioniq = Join-Path $htmlDir "cv-darshan-lingegowda-evolutioniq.html"
+@"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -436,16 +436,18 @@ $html_evolutioniq = @'
 </div>
 </body>
 </html>
-'
-@
-$html_evolutioniq | Out-File -FilePath (Join-Path $htmlDir 'cv-darshan-lingegowda-evolutioniq.html') -Encoding utf8
-$pdf_evolutioniq = Join-Path $outDir 'cv-darshan-lingegowda-evolutioniq-2026-04-13.pdf'
-Write-Host 'Generating cv-darshan-lingegowda-evolutioniq-2026-04-13.pdf...'
-& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 --print-to-pdf="$pdf_evolutioniq" --print-to-pdf-no-header (Join-Path $htmlDir 'cv-darshan-lingegowda-evolutioniq.html') 2>$null
-if (Test-Path $pdf_evolutioniq) { Write-Host "  OK: $pdf_evolutioniq" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-evolutioniq-2026-04-13.pdf" }
+"@
+ | Out-File -FilePath $htmlPath_evolutioniq -Encoding utf8NoBOM
+$pdfPath_evolutioniq = Join-Path $outDir "cv-darshan-lingegowda-evolutioniq-2026-04-13.pdf"
+Write-Host "Generating cv-darshan-lingegowda-evolutioniq-2026-04-13.pdf..."
+& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 `
+    --print-to-pdf="$pdfPath_evolutioniq" --print-to-pdf-no-header `
+    "$htmlPath_evolutioniq" 2>$null
+if (Test-Path $pdfPath_evolutioniq) { Write-Host "  OK: cv-darshan-lingegowda-evolutioniq-2026-04-13.pdf" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-evolutioniq-2026-04-13.pdf" }
 
 # --- NATERA ---
-$html_natera = @'
+$htmlPath_natera = Join-Path $htmlDir "cv-darshan-lingegowda-natera.html"
+@"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -637,16 +639,18 @@ $html_natera = @'
 </div>
 </body>
 </html>
-'
-@
-$html_natera | Out-File -FilePath (Join-Path $htmlDir 'cv-darshan-lingegowda-natera.html') -Encoding utf8
-$pdf_natera = Join-Path $outDir 'cv-darshan-lingegowda-natera-2026-04-13.pdf'
-Write-Host 'Generating cv-darshan-lingegowda-natera-2026-04-13.pdf...'
-& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 --print-to-pdf="$pdf_natera" --print-to-pdf-no-header (Join-Path $htmlDir 'cv-darshan-lingegowda-natera.html') 2>$null
-if (Test-Path $pdf_natera) { Write-Host "  OK: $pdf_natera" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-natera-2026-04-13.pdf" }
+"@
+ | Out-File -FilePath $htmlPath_natera -Encoding utf8NoBOM
+$pdfPath_natera = Join-Path $outDir "cv-darshan-lingegowda-natera-2026-04-13.pdf"
+Write-Host "Generating cv-darshan-lingegowda-natera-2026-04-13.pdf..."
+& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 `
+    --print-to-pdf="$pdfPath_natera" --print-to-pdf-no-header `
+    "$htmlPath_natera" 2>$null
+if (Test-Path $pdfPath_natera) { Write-Host "  OK: cv-darshan-lingegowda-natera-2026-04-13.pdf" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-natera-2026-04-13.pdf" }
 
 # --- TRMLABS ---
-$html_trmlabs = @'
+$htmlPath_trmlabs = Join-Path $htmlDir "cv-darshan-lingegowda-trmlabs.html"
+@"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -839,16 +843,18 @@ $html_trmlabs = @'
 </div>
 </body>
 </html>
-'
-@
-$html_trmlabs | Out-File -FilePath (Join-Path $htmlDir 'cv-darshan-lingegowda-trmlabs.html') -Encoding utf8
-$pdf_trmlabs = Join-Path $outDir 'cv-darshan-lingegowda-trmlabs-2026-04-13.pdf'
-Write-Host 'Generating cv-darshan-lingegowda-trmlabs-2026-04-13.pdf...'
-& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 --print-to-pdf="$pdf_trmlabs" --print-to-pdf-no-header (Join-Path $htmlDir 'cv-darshan-lingegowda-trmlabs.html') 2>$null
-if (Test-Path $pdf_trmlabs) { Write-Host "  OK: $pdf_trmlabs" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-trmlabs-2026-04-13.pdf" }
+"@
+ | Out-File -FilePath $htmlPath_trmlabs -Encoding utf8NoBOM
+$pdfPath_trmlabs = Join-Path $outDir "cv-darshan-lingegowda-trmlabs-2026-04-13.pdf"
+Write-Host "Generating cv-darshan-lingegowda-trmlabs-2026-04-13.pdf..."
+& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 `
+    --print-to-pdf="$pdfPath_trmlabs" --print-to-pdf-no-header `
+    "$htmlPath_trmlabs" 2>$null
+if (Test-Path $pdfPath_trmlabs) { Write-Host "  OK: cv-darshan-lingegowda-trmlabs-2026-04-13.pdf" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-trmlabs-2026-04-13.pdf" }
 
 # --- QUORA ---
-$html_quora = @'
+$htmlPath_quora = Join-Path $htmlDir "cv-darshan-lingegowda-quora.html"
+@"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1039,13 +1045,14 @@ $html_quora = @'
 </div>
 </body>
 </html>
-'
-@
-$html_quora | Out-File -FilePath (Join-Path $htmlDir 'cv-darshan-lingegowda-quora.html') -Encoding utf8
-$pdf_quora = Join-Path $outDir 'cv-darshan-lingegowda-quora-2026-04-13.pdf'
-Write-Host 'Generating cv-darshan-lingegowda-quora-2026-04-13.pdf...'
-& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 --print-to-pdf="$pdf_quora" --print-to-pdf-no-header (Join-Path $htmlDir 'cv-darshan-lingegowda-quora.html') 2>$null
-if (Test-Path $pdf_quora) { Write-Host "  OK: $pdf_quora" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-quora-2026-04-13.pdf" }
+"@
+ | Out-File -FilePath $htmlPath_quora -Encoding utf8NoBOM
+$pdfPath_quora = Join-Path $outDir "cv-darshan-lingegowda-quora-2026-04-13.pdf"
+Write-Host "Generating cv-darshan-lingegowda-quora-2026-04-13.pdf..."
+& $chrome --headless=new --no-sandbox --disable-gpu --paper-width=8.5 --paper-height=11 `
+    --print-to-pdf="$pdfPath_quora" --print-to-pdf-no-header `
+    "$htmlPath_quora" 2>$null
+if (Test-Path $pdfPath_quora) { Write-Host "  OK: cv-darshan-lingegowda-quora-2026-04-13.pdf" } else { Write-Warning "  FAILED: cv-darshan-lingegowda-quora-2026-04-13.pdf" }
 
 Write-Host ''
-Write-Host 'Done. PDFs in:' (Join-Path $repoRoot 'output')
+Write-Host 'Done. PDFs are in:' (Join-Path $repoRoot 'output')
