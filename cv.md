@@ -1,93 +1,94 @@
-﻿# Darshan Linge Gowda
+# Darshan Linge Gowda
 
-**AI/ML & GenAI Engineer · LLMOps · Multi-Agent Systems · ML Platform Engineering**
-
-darshanl1711@gmail.com · +91 8951294351 · github.com/DarshanLingegowda · linkedin.com/in/darshan-lingegowda-ai · Bangalore, India · Open to Europe Relocation (Switzerland preferred)
-
----
+darshanl1711@gmail.com | linkedin.com/in/darshan-lingegowda-ai | github.com/DarshanLingegowda  
+Bangalore, India · Open to Remote (USA)
 
 ## Professional Summary
 
-AI/ML Engineer with production experience delivering LLM-powered applications, RAG systems, multi-agent orchestration, and end-to-end ML pipelines. Holds DataCamp Associate AI Engineer for Developers certification - covering LLMOps, OpenAI API, LangChain, vector databases (Pinecone), embeddings, semantic search, and production deployment best practices. Proven impact: 80% accuracy improvement in finance automation, 70% faster invoice workflows via conversational AI agent. Experienced with GCP/Vertex AI, Gemini, Python, MLflow, Docker, and Cloud Run. Prior professional experience in Germany (Munich) from 2017-2021 with M.Sc. from TU Chemnitz - well-suited for DACH/Switzerland market. Seeking ML/AI Engineering roles at AI product companies globally.
+AI/ML Software Engineer with hands-on experience building production AI systems for data analysis, automated evaluation, and orchestration at scale. Shipped a multi-agent AI system with parallel execution and persistent memory on Cloud Run with real users; an RL evaluation environment with automated scoring and telemetry validated at 0.96/1.0; and an end-to-end RAG pipeline with systematic retrieval experiments. Strong command of Python, LangChain, LangGraph, FastAPI, and GCP infrastructure — backed by three years of enterprise backend engineering in data-heavy, high-volume production environments.
 
----
+## Core Competencies
 
-## Core Technical Skills
+- Production AI Systems Engineering
+- Multi-Agent Orchestration & Parallel Execution
+- LLM Evaluation & Automated Scoring
+- RAG Pipelines & Semantic Search
+- LangChain & LangGraph
+- FastAPI & Python Backend
+- GCP Cloud Run & Docker
+- Data Pipelines & Observability
 
-**LLMs & GenAI:** OpenAI API, Gemini 2.5, LangChain, LangGraph, prompt engineering, fine-tuning, RAG, LLMOps
-**ML Engineering:** Supervised/unsupervised learning, embeddings, vector DBs (Pinecone), MLflow, evaluation design
-**Agentic AI:** Multi-agent orchestration, tool-use, stateful agent design, conversational AI, ReAct pattern
-**Cloud / MLOps:** GCP, Vertex AI, Cloud Run, Cloud Build CI/CD, Docker, containerisation, monitoring
-**Data Engineering:** Pipelines, preprocessing, anomaly detection, label quality, ETL, data migration, XML schema design
-**Languages & APIs:** Python, SQL, Node.js, FastAPI, C#, PHP, REST APIs, SOAP, Jenkins, Bash, Datadog observability
+## Work Experience
 
----
+### PICA GmbH — Software Developer
+**Munich, Germany · 2018–2021**
 
-## Certifications & Training
+- Built ML-driven data validation and automation pipelines for BMW service centres — end-to-end ownership from data ingestion and model design through production deployment, delivering 80% accuracy improvement.
+- Implemented structured observability and automated anomaly detection across healthcare, mobility, and industrial domains.
 
-- DataCamp - Associate AI Engineer for Developers (LLMOps, OpenAI API, LangChain, Pinecone, semantic search, embeddings, production AI systems)
-- DataCamp - Developing AI Applications · OpenAI Fundamentals
-- MIT-IDSS - Data Science & Machine Learning
-- HarvardX - CS50 Python
-- Kaggle - Generative AI & AI Agents Intensive
+### AAM IT GmbH / Vorwerk Switzerland — Software Developer (Contract)
+**Munich, Germany · Jan–Oct 2018**
 
----
+- Engineered C# backend APIs, SOAP-based integrations, and SQL Server data migration pipelines for Vorwerk's Thermomix smart appliance platform.
+- Led large-scale relational-to-XML schema transformation ensuring high data integrity across distributed systems.
+- Built Python automation for XML dataset validation, anomaly detection, and ETL optimisation using Jenkins, Bash, and PHP.
+
+### Adremes — Software Developer (Trainee)
+**Hamburg, Germany · May–Oct 2017**
+
+- Reduced manual ad scheduling workload by 40% building automated backend tooling for radio ad slot booking — C# MVC application integrated into the media planning platform.
 
 ## Selected AI/ML Projects
 
-### AI Invoice Agent - Conversational Multi-Agent System | Gen AI Academy APAC, Track 1 · 2025
-- Built production-grade conversational AI agent automating invoice creation, payment tracking, and real-time financial analytics using multi-agent orchestration and tool-use patterns.
-- Architected end-to-end agentic pipeline: React + Vite -> Node.js Express API -> Gemini 2.5 Flash reasoning layer -> persistent storage.
-- Resolved critical production reliability issue (model/API version mismatch), achieving stable low-latency responses.
-- Containerised with Docker, deployed on Google Cloud Run via Cloud Build CI/CD.
-- Impact: ~70% faster invoice workflows.
+### Multi-Agent Productivity Assistant — Production AI System at Scale
+**Gen AI Academy APAC · 2026**
 
-### Multi-Agent Productivity Assistant - Orchestrated AI System | Gen AI Academy APAC Edition · 2025
-- Architected multi-agent AI system (Gemini 2.0 Flash + Google ADK) where a primary Orchestrator Agent routes intent to four specialist sub-agents: Calendar, Task, Notes, Email.
-- Integrated Google Calendar MCP and Gmail MCP for real-time tool-use; parallel agent execution handles multi-step workflows in a single conversation turn.
-- Deployed on Google Cloud Run via Cloud Build CI/CD (Docker); AlloyDB AI for persistent structured memory.
+Architected and shipped a production multi-agent AI system: Orchestrator routing intent to four specialist sub-agents via Gemini 2.0 Flash + Google ADK, parallel agent execution resolving complex requests in a single turn, real-time MCP tool-use, AlloyDB AI persistent session memory. Cloud Build CI/CD, Cloud Run deployment. Real users in production.
 
-### AI SRE Copilot - Multimodal LLM Observability | DEVPOST Hackathon · 2025
-- Built multimodal AI copilot for automated root-cause analysis integrating Datadog metrics/logs with Vertex AI (Gemini).
-- Deployed FastAPI service on Cloud Run (serverless).
+*Gemini 2.0 Flash · Google ADK · LangGraph · MCP · FastAPI · Cloud Build CI/CD · Cloud Run · AlloyDB AI*
 
-### TravelAI - Multimodal-Ready RAG Concierge | Kaggle Capstone · 2025
-- Designed end-to-end data pipeline ingesting heterogeneous data into embedding-based retrieval indexes using vector DB techniques.
-- Built RAG architecture with semantic search, context tracking, and LLM grounding.
+### WorkflowEnv — Automated LLM Evaluation & Scoring System
+**OpenEnv AI Hackathon · Meta × Hugging Face · 2026**
 
-### Generative AI Search Agent | Personal Project · Ongoing
-- LLM-powered agent using embeddings + vector DB for semantic retrieval; prompt chaining and contextual memory.
-- Containerised via Docker/CI-CD; achieved ~40% faster resolution vs. keyword search.
+Built and deployed an OpenEnv-compliant RL evaluation environment — 7-criterion partial-credit grader, telemetry logging for full experiment traceability, automated scoring pipeline connecting agent outputs to feedback signals, Docker deployment to HF Spaces. Both phases validated. Avg score 0.96/1.0.
 
-### Domain-Specific LLM - Map & Mobility Data | Freelance / Europe · 2021-2023
-- Owned full ML lifecycle: data processing -> modelling -> deployment -> monitoring for large-scale geospatial systems.
-- Thesis work adopted by a Galileo Map Service Provider.
+*FastAPI · Docker · HF Spaces · OpenEnv · LLM evaluation · automated scoring · telemetry · experiment traceability*
 
----
+### TravelAI — RAG Pipeline with Data Integration & Retrieval Evaluation
+**Kaggle Capstone · 2025**
 
-## Professional Experience
+End-to-end RAG system: heterogeneous data ingestion, chunking and embedding pipeline design, hybrid vector search, LLM grounding, and controlled experiments measuring retrieval relevance and response consistency across configurations.
 
-### Software Developer | PICA GmbH - Munich, Germany · 2018-2021
-- Automated SAP invoice generation for BMW service centres across South Germany & Austria; delivered 80% accuracy improvement and 50% processing time reduction using ML-driven data validation.
-- Built data-driven backend systems across healthcare, mobility, and industrial domains in regulated environments.
-- Designed validation logic, normalisation rules, and automated checks improving data quality.
-- Strengthened observability via error handling and logging; reduced recurring production failures.
+*RAG · Vector DB · Pinecone · Embeddings · Semantic search · LLM grounding · Retrieval evaluation · Python*
 
-### Software Developer (Contract) | AAM IT GmbH - Munich · 2018
-Project: Thermomix Backend - AMAN Media GmbH / Vorwerk, Switzerland
-- Designed and executed migration of large relational database into new XML-based schema for the Thermomix product platform.
-- Developed C# APIs for multiple interfaces; integrated SOAP web services and automated ETL pipelines using Jenkins, Bash, and PHP.
-- Built Python scripts for real-time data mining, correction, and optimisation against live datasets.
-- Provided cross-timezone technical support including teams in Asia.
+### AI SRE Copilot — LLMOps Observability Infrastructure
+**DEVPOST Hackathon · 2025**
 
-### Software Developer (Trainee) | ADREMES GmbH - Hamburg · 2017
-- Backend validation and session-handling workflows; dashboard enhancements for cloud ad-analytics platform.
+LLMOps observability infrastructure integrating Datadog with Vertex AI (Gemini) for automated root-cause analysis of production incidents. FastAPI on Cloud Run. Real-time LLM monitoring, structured logging, and observability backbone.
 
----
+*Vertex AI · Gemini · Datadog · FastAPI · Cloud Run · LLMOps · structured observability*
 
 ## Education
 
-**M.Sc. Information & Communication Systems** - TU Chemnitz, Germany
-Thesis: IEEE-published - large-scale geospatial data processing adopted by a Galileo Map Service Provider for production use.
+**M.Sc. Information & Communication Systems** — TU Chemnitz, Germany · 2017–2021  
+Thesis: IEEE-published — large-scale geospatial ML pipeline adopted by a Galileo Map Service Provider for production use.
 
-**B.E. Electronics & Communication Engineering** - Visvesvaraya Technological University, India
+**B.E. Electronics & Communication Engineering** — Visvesvaraya Technological University · 2013–2017
+
+## Certifications
+
+- **DataCamp** — Associate AI Engineer for Developers (LLMOps, OpenAI API, LangChain, Pinecone, Embeddings, Production AI Systems) · 2025
+- **MIT-IDSS** — Data Science & Machine Learning · 2024–2025
+- **Kaggle** — Generative AI & AI Agents Intensive · 2025
+
+## Skills
+
+**AI & Agents:** LangChain, LangGraph, Google ADK, Gemini 2.5/2.0, OpenAI API, multi-agent orchestration, parallel execution, LLM evaluation, automated scoring, RAG pipelines
+
+**Data & Retrieval:** vector DBs (Pinecone), embeddings, semantic search, retrieval evaluation, data pipelines, LLM grounding, ETL, anomaly detection
+
+**Cloud / Infra:** GCP, Vertex AI, Cloud Run, Cloud Build CI/CD, Docker, FastAPI, HF Spaces, AlloyDB AI
+
+**Observability:** Datadog, MLflow, structured logging, LLMOps, experiment traceability
+
+**Languages:** Python, FastAPI, Node.js, SQL, Bash
