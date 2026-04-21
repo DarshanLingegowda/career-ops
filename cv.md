@@ -95,10 +95,10 @@ Structured upskilling into data science and ML: MIT IDSS — Data Science & Mach
 
 ## Skills
 
-**AI & Agents:** Gemini 2.0/2.5, OpenAI API, LangChain, LangGraph, Google ADK, multi-agent orchestration, parallel execution, LLM evaluation, automated scoring, RAG pipelines
+**AI & Agents:** Gemini 2.0/2.5, OpenAI API, Anthropic API, LangChain, LangGraph, Google ADK, multi-agent orchestration, parallel execution, LLM evaluation, automated scoring, RAG pipelines
 
 **Data & Retrieval:** vector DBs (Pinecone), embeddings, semantic search, retrieval evaluation, data pipelines, LLM grounding, ETL, anomaly detection
 
-**Cloud / Infra:** GCP, Vertex AI, Cloud Run, Cloud Build CI/CD, Docker, FastAPI, HF Spaces, AlloyDB AI, MLflow, Datadog
+**Cloud / Infra:** GCP, AWS, Vertex AI, Cloud Run, Cloud Build CI/CD, Docker, FastAPI, HF Spaces, AlloyDB AI, MLflow, Datadog
 
 **Languages:** Python, FastAPI, Node.js, SQL, Bash
