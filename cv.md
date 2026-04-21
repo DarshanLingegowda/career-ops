@@ -27,6 +27,7 @@ AI engineer specialising in turning LLM and agent research into production-grade
 - Delivered ML and geospatial data pipeline consulting engagements building on production ML systems developed during M.Sc. research.
 - Improved client model accuracy by ~18% through feature engineering and retrieval pipeline optimisation, delivering projects ahead of estimated timelines.
 - Extended the Gabeo Maps production geospatial ML system with new ML capabilities for client use cases.
+- Accelerated development velocity across all engagements using GitHub Copilot and Claude Code for code generation, review, and iterative refinement.
 
 ### PICA GmbH — Software Developer
 **Munich, Germany · 2018–2021**
@@ -51,9 +52,9 @@ AI engineer specialising in turning LLM and agent research into production-grade
 ### Multi-Agent Productivity Assistant — Production Agentic System
 **Gen AI Academy APAC · 2026**
 
-Architected and shipped a production multi-agent AI system: Orchestrator routing intent to four specialist sub-agents via Gemini 2.0 Flash + Google ADK, parallel agent execution cutting resolution time by ~75% over sequential baseline, real-time MCP tool-use, AlloyDB AI persistent session memory. Cloud Build CI/CD, Cloud Run deployment with real users in production.
+Architected and shipped a production multi-agent AI system: Orchestrator routing intent to four specialist sub-agents via Gemini 2.0 Flash + Google ADK, parallel agent execution cutting resolution time by ~75% over sequential baseline, real-time MCP tool-use, AlloyDB AI persistent session memory. Cloud Build CI/CD, Cloud Run deployment with real users in production. Developed with GitHub Copilot and Claude Code throughout.
 
-*Gemini 2.0 Flash · Google ADK · LangGraph · MCP · FastAPI · Cloud Build CI/CD · Cloud Run · AlloyDB AI*
+*Gemini 2.0 Flash · Google ADK · LangGraph · MCP · FastAPI · Cloud Build CI/CD · Cloud Run · AlloyDB AI · GitHub Copilot · Claude Code*
 
 ### WorkflowEnv — Automated LLM Evaluation & Scoring System
 **OpenEnv AI Hackathon · Meta × Hugging Face · 2026**
@@ -100,5 +101,7 @@ Structured upskilling into data science and ML: MIT IDSS — Data Science & Mach
 **Data & Retrieval:** vector DBs (Pinecone), embeddings, semantic search, retrieval evaluation, data pipelines, LLM grounding, ETL, anomaly detection
 
 **Cloud / Infra:** GCP, AWS, Vertex AI, Cloud Run, Cloud Build CI/CD, Docker, FastAPI, HF Spaces, AlloyDB AI, MLflow, Datadog
+
+**AI-Assisted Development:** GitHub Copilot, Claude Code — used across all AI/ML projects and freelance engagements for code generation, review, and iterative development
 
 **Languages:** Python, FastAPI, Node.js, SQL, Bash
